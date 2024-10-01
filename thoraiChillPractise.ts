@@ -72,3 +72,51 @@
 // const addGaramHai = new add(10,20)
 
 // addGaramHai.addHunxa()
+
+
+// Public: Accessible from anywhere.
+// Private: Accessible only within the class.
+// Protected: Accessible within the class and subclasses.
+
+// class User {
+//   public name: string
+//   private age: number
+//   protected gender: string | number
+
+//   constructor(name: string , age: number , gender: any){
+//     this.name =  name
+//     this.age = age
+//     this.gender = gender
+//   }
+
+//   getAge(){
+//     return this.age
+//   }
+
+//   getGender(){
+//     return this.gender
+//   }
+// }
+// const userKoData = new User('nam', 12 , [12,3])
+
+// console.log(userKoData.name)
+// console.log(userKoData.getAge())
+// console.log(userKoData.getGender())
+
+class Box<T> {
+  private content: T;
+
+  constructor(content: T) {
+    this.content = content;
+  }
+
+  public getContent(): T {
+    return this.content;
+  }
+}
+
+const numberBox = new Box<number>(100);
+const stringBox = new Box<string>('Hello');
+
+console.log(numberBox.getContent()); 
+console.log(stringBox.getContent());

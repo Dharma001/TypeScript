@@ -103,20 +103,101 @@
 // console.log(userKoData.getAge())
 // console.log(userKoData.getGender())
 
-class Box<T> {
-  private content: T;
+// class Box<T> {
+//   private content: T;
 
-  constructor(content: T) {
-    this.content = content;
-  }
+//   constructor(content: T) {
+//     this.content = content;
+//   }
 
-  public getContent(): T {
-    return this.content;
-  }
-}
+//   public getContent(): T {
+//     return this.content;
+//   }
+// }
 
-const numberBox = new Box<number>(100);
-const stringBox = new Box<string>('Hello');
+// const numberBox = new Box<number>(100);
+// const stringBox = new Box<string>('Hello');
 
-console.log(numberBox.getContent()); 
-console.log(stringBox.getContent());
+// console.log(numberBox.getContent()); 
+// console.log(stringBox.getContent());
+
+
+// abstract class Database {
+//   abstract connect(): void;
+//   abstract query(sql: string): void;
+// }
+
+// class MySQLDatabase extends Database {
+//   connect(): void {
+//     console.log('Connected to MySQL');
+//   }
+
+//   query(sql: string): void {
+//     console.log(`Executing query on MySQL: ${sql}`);
+//   }
+// }
+
+// class MongoDBDatabase extends Database {
+//   connect(): void {
+//     console.log('Connected to MongoDB');
+//   }
+
+//   query(sql: string): void {
+//     console.log(`Executing query on MongoDB: ${sql}`);
+//   }
+// }
+
+// function runQuery(db: Database, sql: string) {
+//   db.connect();
+//   db.query(sql);
+// }
+
+// const mysql = new MySQLDatabase();
+// const mongo = new MongoDBDatabase();
+
+// runQuery(mysql, 'SELECT * FROM users');
+// runQuery(mongo, '{ find: "users" }');
+
+// abstract class Vehicle {
+//   abstract startEngine(): void;
+
+//   stopEngine(): void {
+//     console.log("The engine is stopped.");
+//   }
+
+//   abstract drive(): void;
+// }
+
+// class Car extends Vehicle {
+//   startEngine(): void {
+//     console.log("Car engine started.");
+//   }
+
+//   drive(): void {
+//     console.log("Car is driving.");
+//   }
+// }
+
+// class Bike extends Vehicle {
+//   startEngine(): void {
+//     console.log("Bike engine started.");
+//   }
+
+//   drive(): void {
+//     console.log("Bike is driving.");
+//   }
+// }
+
+// function testDrive(vehicle: Vehicle) {
+//   vehicle.startEngine();
+//   vehicle.drive();
+//   vehicle.stopEngine();
+// }
+
+// const myCar = new Car();
+// const myBike = new Bike();
+
+// testDrive(myCar);
+// testDrive(myBike);
+
+
